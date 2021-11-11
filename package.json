@@ -1,0 +1,23 @@
+{
+  "name": "fcc_technical_documentation_page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "publish": "node publish.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mouhammad-raddad/Technical-Documentation-Page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mouhammad-raddad/Technical-Documentation-Page/issues"
+  },
+  "homepage": "https://github.com/mouhammad-raddad/Technical-Documentation-Page#readme",
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
