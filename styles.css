@@ -115,7 +115,8 @@ color: grey;
 }
 
 a:hover{
-  background-color: rgb(160, 222, 226);
+  background-color: rgb(106, 107, 107);
+  color: rgb(255, 255, 255)!important;
 }
 @media only screen and (max-width: 500px) {
   #main-doc {
