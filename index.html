@@ -39,7 +39,8 @@
 				   href="#What_does_Express_code_look_like">What does Express code look like?</a></li>
 			<li><a class="nav-link"
 				   href="#Summary">Summary</a></li>
-
+			<li><a class="nav-link"
+				   href="#Resources">Resources</a></li>
 		</ul>
 	</nav>
 
@@ -129,26 +130,29 @@
 						into it:
 					</li>
 					<div class="CodeArea">
-						<p>// Load HTTP module <br>
+						<p>
+							<comment>// Load HTTP module</comment><br>
 							const http = require("http");<br>
 
 							const hostname = "127.0.0.1";<br>
 							const port = 8000;<br>
 
-							// Create HTTP server<br>
+							<comment>// Create HTTP server</comment><br>
 							const server = http.createServer(function(req, res) {<br>
 
-							// Set the response HTTP header with HTTP status and Content type<br>
+							<comment>// Set the response HTTP header with HTTP status and Content type
+							</comment><br>
 							res.writeHead(200, {'Content-Type': 'text/plain'});<br>
 
-							// Send the response body "Hello World"<br>
-							res.end('Hello World\n');<br>
-							});<br>
+							<comment>// Send the response body "Hello World"</comment><br>
+									res.end('Hello World\n');<br>
+									});<br>
 
-							// Prints a log once the server starts listening<br>
-							server.listen(port, hostname, function() {<br>
-							console.log(`Server running at http://${hostname}:${port}/`);<br>
-							})</p>
+									<comment>// Prints a log once the server starts listening</comment><br>
+									server.listen(port, hostname, function() {<br>
+									console.log(`Server running at http://${hostname}:${port}/`);<br>
+									})
+						</p>
 					</div>
 					<li>Save the file in the folder you created above.
 					</li>
@@ -391,8 +395,7 @@
 				</div>
 				<p>We can import this module using require(), and then call the exported method(s) as shown:</p>
 				<div class="CodeArea">
-					<p>const square = require('./square'); // Here we require() the name of the file without the
-						(optional) .js file extension <br>
+					<p>const square = require('./square'); <comment>// Here we require() the name of the file without the (optional) .js file extension </comment><br>
 						console.log('The area of a square with a width of 4 is ' + square.area(4));<br>
 					</p>
 				</div>
@@ -535,17 +538,17 @@
 					route in a module named wiki.js, and then export the Router object, as shown below:</p>
 
 				<div class="CodeArea">
-					<p>// wiki.js - Wiki route module<br>
+					<p><comment>// wiki.js - Wiki route module</comment>
 
 						const express = require('express');<br>
 						const router = express.Router();<br>
 
-						// Home page route<br>
+						<comment>// Home page route</comment><br>
 						router.get('/', function(req, res) {<br>
 						res.send('Wiki home page');<br>
 						});<br>
 
-						// About page route<br>
+						<comment>// About page route</comment><br>
 						router.get('/about', function(req, res) {<br>
 						res.send('About this wiki');<br>
 						});<br>
@@ -632,19 +635,19 @@
 					<p>const express = require('express');<br>
 						const app = express();<br>
 
-						// An example middleware function<br>
+						<comment>// An example middleware function</comment><br>
 						let a_middleware_function = function(req, res, next) {<br>
-						// ... perform some operations<br>
+						<comment>// ... perform some operations</comment><br>
 						next(); // Call next() so Express will call the next middleware function in the chain.<br>
 						}<br>
 
-						// Function added with use() for all routes and verbs<br>
+						<comment>// Function added with use() for all routes and verbs</comment><br>
 						app.use(a_middleware_function);<br>
 
-						// Function added with use() for a specific route<br>
+						<comment>// Function added with use() for a specific route</comment><br>
 						app.use('/someroute', a_middleware_function);<br>
 
-						// A middleware function added for a specific HTTP verb and route<br>
+						<comment>// A middleware function added for a specific HTTP verb and route</comment><br>
 						app.get('/', a_middleware_function);<br>
 
 						app.listen(3000);<br></p>
@@ -746,7 +749,7 @@
 					Express documentation) shows how you can find "mammal" records using MongoDB.</p>
 
 				<div class="CodeArea">
-					<p>//this works with older versions of mongodb version ~ 2.2.33<br>
+					<p><comment>//this works with older versions of mongodb version ~ 2.2.33</comment><br>
 						const MongoClient = require('mongodb').MongoClient;<br>
 
 						MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {<br>
@@ -759,7 +762,7 @@
 						});<br>
 						});<br>
 
-						//for mongodb version 3.0 and up<br>
+						<comment>//for mongodb version 3.0 and up</comment><br>
 						const MongoClient = require('mongodb').MongoClient;<br>
 						MongoClient.connect('mongodb://localhost:27017/animals', function(err, client){<br>
 						if(err) throw err;<br>
@@ -805,10 +808,10 @@
 						const path = require('path');<br>
 						const app = express();<br>
 
-						// Set directory to contain the templates ('views')<br>
+						<comment>// Set directory to contain the templates ('views')</comment><br>
 						app.set('views', path.join(__dirname, 'views'));<br>
 
-						// Set view engine to use, in this case 'some_template_engine_name'<br>
+						<comment>// Set view engine to use, in this case 'some_template_engine_name'</comment><br>
 						app.set('view engine', 'some_template_engine_name');<br></p>
 				</div>
 
@@ -859,6 +862,17 @@
 					article we're going to look at setting up a Node development environment, so that you can start
 					seeing some Express code
 					in action.</p>
+			</article>
+		</section>
+
+		<section class="main-section"
+				 id="Resources">
+			<header>Resources</header>
+			<article>
+				<a
+				   href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#in_this_module">
+					<p>MDN Web Docs: Express/Node introduction</p>
+				</a>
 			</article>
 		</section>
 	</main>

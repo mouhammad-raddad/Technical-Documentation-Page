@@ -26,7 +26,7 @@ header {
 }
 #main-doc header {
   text-align: left;
-  margin: 0px;
+  margin: 70px 0px;
 }
 #navbar ul {
   height: 88%;
@@ -50,7 +50,7 @@ header {
 }
 #main-doc {
   position: absolute;
-  margin-left: 310px;
+  margin-left: 250px;
   padding: 20px;
   margin-bottom: 110px;
 }
@@ -66,6 +66,8 @@ table,
 th,
 td {
   border: 1px solid black;
+    border-collapse: collapse;
+  padding: 30px;
 }
 .CodeArea {
   display: block;
@@ -74,10 +76,59 @@ td {
   position: relative;
   word-break: normal;
   word-wrap: normal;
-  line-height: 2;
-  background-color: #a5a5a5;
+  line-height: .7;
+  background-color: #cacaca;
   color: #000000;
-  padding: 15px;
-  margin: 10px;
+  padding: 0px 15px;
+  margin: 0px;
   border-radius: 5px;
+  border-left: 3px solid rgb(80, 79, 79);
+}
+comment{
+color: grey;
+}
+@media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+  #navbar ul {
+    border: 1px solid;
+    height: 207px;
+  }
+
+  #navbar {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 270px;
+  }
+}
+
+a:hover{
+  background-color: rgb(160, 222, 226);
+}
+@media only screen and (max-width: 500px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  .CodeArea {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+    line-height: normal;
+  }
 }
