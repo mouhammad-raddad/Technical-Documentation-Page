@@ -14,7 +14,7 @@
 <body>
 
 	<nav id="navbar">
-		<header><a class="nav-link"
+		<header><a class="nav-link nohover"
 			   href="#Express_Node_introduction">Express/Node Documentation</a></header>
 		<ul>
 			<li><a class="nav-link"
@@ -40,7 +40,7 @@
 			<li><a class="nav-link"
 				   href="#Summary">Summary</a></li>
 			<li><a class="nav-link"
-				   href="#Resources">Resources</a></li>
+				   href="#Sources">Sources</a></li>
 		</ul>
 	</nav>
 
@@ -145,13 +145,13 @@
 							res.writeHead(200, {'Content-Type': 'text/plain'});<br>
 
 							<comment>// Send the response body "Hello World"</comment><br>
-									res.end('Hello World\n');<br>
-									});<br>
+							res.end('Hello World\n');<br>
+							});<br>
 
-									<comment>// Prints a log once the server starts listening</comment><br>
-									server.listen(port, hostname, function() {<br>
-									console.log(`Server running at http://${hostname}:${port}/`);<br>
-									})
+							<comment>// Prints a log once the server starts listening</comment><br>
+							server.listen(port, hostname, function() {<br>
+							console.log(`Server running at http://${hostname}:${port}/`);<br>
+							})
 						</p>
 					</div>
 					<li>Save the file in the folder you created above.
@@ -395,7 +395,8 @@
 				</div>
 				<p>We can import this module using require(), and then call the exported method(s) as shown:</p>
 				<div class="CodeArea">
-					<p>const square = require('./square'); <comment>// Here we require() the name of the file without the (optional) .js file extension </comment><br>
+					<p>const square = require('./square'); <comment>// Here we require() the name of the file without
+							the (optional) .js file extension </comment><br>
 						console.log('The area of a square with a width of 4 is ' + square.area(4));<br>
 					</p>
 				</div>
@@ -538,7 +539,8 @@
 					route in a module named wiki.js, and then export the Router object, as shown below:</p>
 
 				<div class="CodeArea">
-					<p><comment>// wiki.js - Wiki route module</comment>
+					<p>
+						<comment>// wiki.js - Wiki route module</comment>
 
 						const express = require('express');<br>
 						const router = express.Router();<br>
@@ -553,7 +555,8 @@
 						res.send('About this wiki');<br>
 						});<br>
 
-						module.exports = router;<br></p>
+						module.exports = router;<br>
+					</p>
 				</div>
 				<p>Note: Adding routes to the Router object is just like adding routes to the app object (as shown
 					previously).</p>
@@ -650,7 +653,8 @@
 						<comment>// A middleware function added for a specific HTTP verb and route</comment><br>
 						app.get('/', a_middleware_function);<br>
 
-						app.listen(3000);<br></p>
+						app.listen(3000);<br>
+					</p>
 				</div>
 				<p>Note: Above we declare the middleware function separately and then set it as the callback. In our
 					previous route handler
@@ -749,7 +753,8 @@
 					Express documentation) shows how you can find "mammal" records using MongoDB.</p>
 
 				<div class="CodeArea">
-					<p><comment>//this works with older versions of mongodb version ~ 2.2.33</comment><br>
+					<p>
+						<comment>//this works with older versions of mongodb version ~ 2.2.33</comment><br>
 						const MongoClient = require('mongodb').MongoClient;<br>
 
 						MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {<br>
@@ -773,7 +778,8 @@
 						console.log(result);<br>
 						client.close();<br>
 						});<br>
-						});<br></p>
+						});<br>
+					</p>
 				</div>
 				<p>Another popular approach is to access your database indirectly, via an Object Relational Mapper
 					("ORM"). In this
@@ -812,7 +818,8 @@
 						app.set('views', path.join(__dirname, 'views'));<br>
 
 						<comment>// Set view engine to use, in this case 'some_template_engine_name'</comment><br>
-						app.set('view engine', 'some_template_engine_name');<br></p>
+						app.set('view engine', 'some_template_engine_name');<br>
+					</p>
 				</div>
 
 				<p>The appearance of the template will depend on what engine you use. Assuming that you have a template
@@ -866,13 +873,16 @@
 		</section>
 
 		<section class="main-section"
-				 id="Resources">
-			<header>Resources</header>
+				 id="Sources">
+			<header>Sources</header>
 			<article>
-				<a
-				   href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#in_this_module">
-					<p>MDN Web Docs: Express/Node introduction</p>
-				</a>
+				<ul>
+					<li><a
+						   href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#in_this_module">
+							<p>MDN Web Docs: Express/Node introduction</p>
+						</a></li>
+				</ul>
+
 			</article>
 		</section>
 	</main>
