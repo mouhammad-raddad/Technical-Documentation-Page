@@ -1,10 +1,10 @@
 html,
 body {
-  min-width: 290px;
   color: #4d4e53;
   background-color: #ffffff;
   font-family: 'Open Sans', Arial, sans-serif;
   line-height: 1.5;
+  width: 100% !important;
 }
 #navbar {
   position: fixed;
@@ -26,7 +26,7 @@ header {
 }
 #main-doc header {
   text-align: left;
-  margin: 20px 0px;
+  margin: 10px 0px !important;
 }
 #navbar ul {
   height: 88%;
@@ -84,17 +84,21 @@ th {
   white-space: pre-line;
   position: relative;
   word-break: normal;
-  word-wrap: normal;
+  word-wrap: break-word;
   line-height: 0.7;
   background-color: #cacaca;
   color: #000000;
-  padding: 0px 15px;
+  padding: 0px 15px !important;
   margin: 0px;
   border-radius: 5px;
   border-left: 3px solid rgb(80, 79, 79);
 }
+
 comment {
   color: grey;
+}
+.res-ul{
+  padding-left: 1rem;
 }
 @media only screen and (max-width: 800px) {
   /* For mobile phones: */
@@ -162,12 +166,12 @@ comment {
     height: 207px;
   }
   .nohover {
-    padding-left: 0px !important;
+    padding-left: 0px 20px !important;
   }
   #navbar {
     background-color: white;
     position: absolute;
-    left: 20%;
+    left: 10%;
     top: 0;
     padding: 0;
     margin: 0;
@@ -180,6 +184,8 @@ comment {
   #main-doc {
     position: relative;
     margin-left: 0px;
+    margin-right: 20px !important;
+    padding-right: 0px !important;
     margin-top: 270px;
     padding-top: 70px;
   }
@@ -202,15 +208,17 @@ comment {
     top: 0;
     padding: 0;
     margin: 0;
+    /* margin-right: 20px !important; */
     width: 100%;
     max-height: 275px;
     border: none;
     z-index: 1;
   }
-
   #main-doc {
     position: relative;
     margin-left: 0px;
+    margin-right: 20px !important;
+    padding-right: 0px !important;
     margin-top: 270px;
     padding-top: 70px;
   }
@@ -219,6 +227,7 @@ a:not(.nohover):hover {
   background-color: rgb(106, 107, 107);
   color: rgb(255, 255, 255) !important;
 }
+
 @media only screen and (max-width: 500px) {
   #main-doc {
     margin-left: -10px;
@@ -246,6 +255,5 @@ a:not(.nohover):hover {
     padding-left: 10px;
     padding-right: 10px;
     min-width: 233px;
-    line-height: normal;
   }
 }
