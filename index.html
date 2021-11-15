@@ -756,22 +756,17 @@
 					<p>
 						<comment>//this works with older versions of mongodb version ~ 2.2.33</comment><br>
 						const MongoClient = require('mongodb').MongoClient;<br>
-
-						MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {<br>
+						MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
 						if (err) throw err;<br>
-
 						db.collection('mammals').find().toArray(function (err, result) {<br>
 						if (err) throw err;<br>
-
 						console.log(result);<br>
 						});<br>
 						});<br>
-
 						<comment>//for mongodb version 3.0 and up</comment><br>
 						const MongoClient = require('mongodb').MongoClient;<br>
 						MongoClient.connect('mongodb://localhost:27017/animals', function(err, client){<br>
 						if(err) throw err;<br>
-
 						let db = client.db('animals');<br>
 						db.collection('mammals').find().toArray(function(err, result){<br>
 						if(err) throw err;<br>
@@ -813,10 +808,8 @@
 					<p>const express = require('express');<br>
 						const path = require('path');<br>
 						const app = express();<br>
-
 						<comment>// Set directory to contain the templates ('views')</comment><br>
 						app.set('views', path.join(__dirname, 'views'));<br>
-
 						<comment>// Set view engine to use, in this case 'some_template_engine_name'</comment><br>
 						app.set('view engine', 'some_template_engine_name');<br>
 					</p>
@@ -876,7 +869,7 @@
 				 id="Sources">
 			<header>Sources</header>
 			<article>
-				<ul>
+				<ul class="res-ul">
 					<li><a
 						   href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#in_this_module">
 							<p>MDN Web Docs: Express/Node introduction</p>
