@@ -4,6 +4,10 @@ body {
   background-color: #ffffff;
   font-family: 'Open Sans', Arial, sans-serif;
   line-height: 1.5;
+  margin-right: 0px !important;
+  padding-right: 0% !important;
+  max-width: 100%;
+  overflow-x: hidden !important;
 }
 #navbar {
   position: fixed;
@@ -53,6 +57,14 @@ header {
   padding: 20px;
   padding-right: 0px !important;
   margin-bottom: 110px;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    width: 100%;
 }
 section article {
   color: #4d4e53;
