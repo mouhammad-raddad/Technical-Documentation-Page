@@ -328,7 +328,10 @@
 				<p>Note: If you have Node and Express already installed (or if you install them as shown in the next
 					article), you can save
 					this code in a text file called app.js and run it in a bash command prompt by calling:</p>
-				<p>node ./app.js</p>
+				<div class="CodeArea">
+					<p>node ./app.js</p>
+				</div>
+				<br>
 				<div class="CodeArea">
 					<p>const express = require('express');<br>
 						const app = express();<br>
@@ -395,9 +398,9 @@
 				</div>
 				<p>We can import this module using require(), and then call the exported method(s) as shown:</p>
 				<div class="CodeArea">
-					<p>const square = require('./square'); <comment>// Here we require() the name of the file without
-							the (optional) .js file extension </comment><br>
-						console.log('The area of a square with a width of 4 is ' + square.area(4));<br>
+					<p>
+						<comment>// Here we require() the name of the file without the (optional) .js file extension
+						</comment><br>const square = require('./square');<br><br>console.log('The area of a square with a width of 4 is ' + square.area(4));<br>
 					</p>
 				</div>
 				<p>Note: You can also specify an absolute path to the module (or a name, as we did initially).</p>
@@ -567,7 +570,7 @@
 					/wiki/ and /wiki/about/.</p>
 				<div class="CodeArea">
 					<p>const wiki = require('./wiki.js');<br>
-						// ... <br>
+						<comment>// ... </comment><br>
 						app.use('/wiki', wiki);<br></p>
 				</div>
 				<p>We'll show you a lot more about working with routes, and in particular about using the Router, later
@@ -756,7 +759,7 @@
 					<p>
 						<comment>//this works with older versions of mongodb version ~ 2.2.33</comment><br>
 						const MongoClient = require('mongodb').MongoClient;<br>
-						MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
+						MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {<br>
 						if (err) throw err;<br>
 						db.collection('mammals').find().toArray(function (err, result) {<br>
 						if (err) throw err;<br>

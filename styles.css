@@ -4,7 +4,6 @@ body {
   background-color: #ffffff;
   font-family: 'Open Sans', Arial, sans-serif;
   line-height: 1.5;
-  width: 100% !important;
 }
 #navbar {
   position: fixed;
@@ -52,6 +51,7 @@ header {
   position: absolute;
   margin-left: 250px;
   padding: 20px;
+  padding-right: 0px !important;
   margin-bottom: 110px;
 }
 section article {
@@ -98,7 +98,7 @@ comment {
   color: grey;
 }
 .res-ul{
-  padding-left: 1rem;
+  padding-left: 0rem;
 }
 @media only screen and (max-width: 800px) {
   /* For mobile phones: */
@@ -116,7 +116,6 @@ comment {
     top: 0;
     padding: 0;
     margin: 0;
-    width: 100%;
     max-height: 275px;
     border: none;
     z-index: 1;
@@ -145,7 +144,6 @@ comment {
     top: 0;
     padding: 0;
     margin: 0;
-    width: 100%;
     max-height: 275px;
     border: none;
     z-index: 1;
@@ -175,7 +173,6 @@ comment {
     top: 0;
     padding: 0;
     margin: 0;
-    width: 100%;
     max-height: 275px;
     border: none;
     z-index: 1;
@@ -209,7 +206,6 @@ comment {
     padding: 0;
     margin: 0;
     /* margin-right: 20px !important; */
-    width: 100%;
     max-height: 275px;
     border: none;
     z-index: 1;
@@ -250,7 +246,6 @@ a:not(.nohover):hover {
 
   .CodeArea {
     margin-left: -20px;
-    width: 100%;
     padding: 15px;
     padding-left: 10px;
     padding-right: 10px;
